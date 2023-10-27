@@ -1,0 +1,22 @@
+<p>directive-component works!</p>
+
+<mat-checkbox [(ngModel)]="bool">Check me!</mat-checkbox>
+
+<p [MkIf]="bool">
+    this is component to show how to create a directive equivalent to ngIf.
+</p>
+
+
+
+<p [MkIf2]="bool">
+    this is a secondary implementation to show how to create a directive equivalent to ngIf.
+</p>
+
+
+
+<input [(ngModel)] = 'firstInput' placeholder='placeholder'>
+<input [(ngModel)] = 'secondInput'>
+
+<p [appTwoInputDirective] = 'firstInput' [secondInput]='secondInput'>
+    this is component to show two input directive.
+</p>
