@@ -1,0 +1,12 @@
+.activeClassDirective{
+    background-color: blanchedalmond;
+}
+
+.activeClassParent{
+    background-color: aqua;
+}
+
+.component{
+    border: 2px solid black;
+    margin: 5px;
+}

@@ -1,6 +1,21 @@
-<app-parent>
-</app-parent>
+Hello this is the Heading bar.
 
+<br>
+<a routerLink="directive" routerLinkActive="activeClassDirective" [routerLinkActiveOptions]="{exact:true}">
+    Click me to show directive component
+</a>
+<br>
+<a routerLink="parent" routerLinkActive="activeClassParent">
+    Click me to Show Parent Component
+</a>
+<br>
+<a [routerLink]="['route', id]">
+    Click me to Show Route Component
+</a>
+<input [(ngModel)]="id">
 
-<app-directive-component>
-</app-directive-component>
+<br>
+
+<div class="component">
+    <router-outlet></router-outlet>
+</div>

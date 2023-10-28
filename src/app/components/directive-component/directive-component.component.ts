@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-directive-component',
@@ -13,8 +14,12 @@ export class DirectiveComponentComponent implements OnInit{
   secondInput: string ='';
 
   placeholder : string=' hello ';
+
+  
+
   ngOnInit() {
   }
 
+  
 
 }

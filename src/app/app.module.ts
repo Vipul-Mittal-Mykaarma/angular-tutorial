@@ -13,6 +13,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { TwoInputDirectiveDirective } from './directive/two-input-directive.directive';
 import { MkIf2Directive } from './directive/mk-if-2.directive';
+import { RoutingComponentComponent } from './components/routing-component/routing-component.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MkIf2Directive } from './directive/mk-if-2.directive';
     MkIfDirective,
     TwoInputDirectiveDirective,
     MkIf2Directive,
+    RoutingComponentComponent,
   ],
   imports: [
     BrowserModule,
