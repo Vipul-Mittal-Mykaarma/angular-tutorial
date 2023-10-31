@@ -10,10 +10,13 @@ import { MkIfDirective } from './directive/mk-if.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { FormsModule } from '@angular/forms';
+import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { TwoInputDirectiveDirective } from './directive/two-input-directive.directive';
 import { MkIf2Directive } from './directive/mk-if-2.directive';
 import { RoutingComponentComponent } from './components/routing-component/routing-component.component';
+import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { ReactiveForm2Component } from './components/reactive-form2/reactive-form2.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { RoutingComponentComponent } from './components/routing-component/routin
     TwoInputDirectiveDirective,
     MkIf2Directive,
     RoutingComponentComponent,
+    TemplateDrivenFormComponent,
+    ReactiveFormComponent,
+    ReactiveForm2Component,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,8 @@ import { RoutingComponentComponent } from './components/routing-component/routin
     BrowserAnimationsModule,
     MatRadioModule,
     MatCheckboxModule,
-    FormsModule
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

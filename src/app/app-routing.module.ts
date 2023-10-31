@@ -5,6 +5,9 @@ import { ParentComponent } from './components/parent/parent.component';
 import { RoutingComponentComponent } from './components/routing-component/routing-component.component';
 import { BasicGuardGuard } from './guard/basic-guard.guard';
 import { BasicResolveResolver } from './resolver/basic-resolve.resolver';
+import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { ReactiveForm2Component } from './components/reactive-form2/reactive-form2.component';
 
 const routes: Routes = [
   {
@@ -17,6 +20,15 @@ const routes: Routes = [
     path:'route/:id' , canActivate:[BasicGuardGuard], resolve:{
       server : BasicResolveResolver
     } , component: RoutingComponentComponent
+  },
+  {
+    path:'form/template', component: TemplateDrivenFormComponent  
+  },
+  {
+    path:'form/reactive', component: ReactiveFormComponent  
+  },
+  {
+    path:'form/reactive2', component: ReactiveForm2Component  
   }
 ];
 

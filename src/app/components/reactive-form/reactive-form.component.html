@@ -1,0 +1,35 @@
+<form [formGroup]="form" (ngSubmit)="formSubmit()">
+    <div>
+        Enter your email : 
+        <input formControlName="email">
+    </div>
+    <div>
+        Enter your phone number: 
+        <input formControlName="number">
+    </div>
+    <div>
+        Enter your name : 
+        <input formControlName="name">
+    </div>
+    
+    <div formArrayName="hobbies">
+        <div *ngFor="let hobby of getHobbies().controls;let i = index;" [formGroupName]="i">
+            <input
+                formControlName="name"
+            />
+            <input
+                formControlName="age"
+            >
+        </div>
+    </div>
+    <div>
+        <button (click)="addHobby()"> Click to Add Hobby</button>
+    </div>
+    <div *ngIf="form.controls['email'].untouched">
+        Email is untouched yet
+    </div>
+    <div *ngIf="form.controls['email'].valid">
+        Email is Valid !
+    </div>
+    <button type="submit">Submit </button>
+</form>

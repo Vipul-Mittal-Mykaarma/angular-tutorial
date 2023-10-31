@@ -1,0 +1,32 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div>
+        Please enter your email : 
+        <input type="email" 
+        ngModel email required #email="ngModel"
+        name="email"
+        >
+    </div>
+    <div>
+        Please enter your name : 
+        <input  ngModel type="text" 
+        #name="ngModel" required name="name">
+    </div>
+    <div>
+        Please enter Phone number : 
+        <input ngModel type="number"
+         #phone="ngModel" name="phone">
+    </div>
+    <div *ngIf="email.untouched">
+        <p> Email is not touched yet </p>
+    </div>
+
+    <div *ngIf="phone.dirty">
+        <p> phone is now touched  </p>
+    </div>
+
+    <div *ngIf="email.valid">
+        <p> Email is valid now </p>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!f.form.valid">Submit</button>
+</form>
