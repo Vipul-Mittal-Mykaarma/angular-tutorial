@@ -17,6 +17,8 @@ import { RoutingComponentComponent } from './components/routing-component/routin
 import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { ReactiveForm2Component } from './components/reactive-form2/reactive-form2.component';
+import { PipeComponentComponent } from './components/pipe-component/pipe-component.component';
+import { SearchPipePipe } from './pipes/search-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { ReactiveForm2Component } from './components/reactive-form2/reactive-for
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
     ReactiveForm2Component,
+    PipeComponentComponent,
+    SearchPipePipe,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,7 @@ import { ReactiveForm2Component } from './components/reactive-form2/reactive-for
     MatRadioModule,
     MatCheckboxModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

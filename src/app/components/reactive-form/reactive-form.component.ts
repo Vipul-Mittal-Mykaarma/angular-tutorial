@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AbstractControl, FormArray, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { AbstractControl, FormArray, FormControl, FormGroup, UntypedFormControl, ValidationErrors, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form',
@@ -10,7 +10,7 @@ export class ReactiveFormComponent {
   
 
   form : FormGroup = new FormGroup({
-      'email' : new FormControl("", [Validators.email]),
+      'email' : new UntypedFormControl("", [Validators.email]),
       'name' : new FormControl(""),
       'number' : new FormControl("", [this.validateNumber]),
       'hobbies' : new FormArray([])
@@ -40,6 +40,7 @@ export class ReactiveFormComponent {
     }));
   }
   formSubmit(){
+    console.log(this.form.value);
     console.log(this.form.controls['number'].errors);
   }
 }

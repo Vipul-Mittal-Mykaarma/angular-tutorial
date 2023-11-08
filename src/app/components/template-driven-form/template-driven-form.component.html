@@ -13,7 +13,7 @@
     </div>
     <div>
         Please enter Phone number : 
-        <input ngModel type="number"
+        <input [ngModel]="'hjh'" type="number"
          #phone="ngModel" name="phone">
     </div>
     <div *ngIf="email.untouched">
@@ -28,5 +28,17 @@
         <p> Email is valid now </p>
     </div>
 
+    <div ngModelGroup="'hi'">
+        <div>
+            Please enter your name : 
+            <input  ngModel type="text" 
+            #name="ngModel" required name="name">
+        </div>
+        <div>
+            Please enter Phone number : 
+            <input [ngModel]="'hjh'" type="number"
+             #phone="ngModel" name="phone">
+        </div>
+    </div>
     <button type="submit" class="btn btn-success" [disabled]="!f.form.valid">Submit</button>
 </form>

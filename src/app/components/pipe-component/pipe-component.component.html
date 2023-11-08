@@ -1,0 +1,8 @@
+<p>Below i am filtering via custom made filter pipe and making every element upper case.</p>
+<input [(ngModel)]="search">
+
+<div *ngFor="let mem of teamMembers | filter : search ">
+    <div>
+        {{mem | uppercase}}
+    </div>
+</div>

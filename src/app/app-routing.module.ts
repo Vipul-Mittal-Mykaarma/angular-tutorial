@@ -8,6 +8,7 @@ import { BasicResolveResolver } from './resolver/basic-resolve.resolver';
 import { TemplateDrivenFormComponent } from './components/template-driven-form/template-driven-form.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { ReactiveForm2Component } from './components/reactive-form2/reactive-form2.component';
+import { PipeComponentComponent } from './components/pipe-component/pipe-component.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,9 @@ const routes: Routes = [
   },
   {
     path:'form/reactive2', component: ReactiveForm2Component  
+  },
+  {
+    path:'pipe', component: PipeComponentComponent  
   }
 ];
 
